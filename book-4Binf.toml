@@ -1,0 +1,8 @@
+[book]
+title = "TPSI - Sviluppo Web Application - Verifica"
+author = "Claudio Capobianco"
+description = "Materiale di supporto alle lezioni."
+
+[build]
+build-dir = "book-4Binf"
+create-missing = true
