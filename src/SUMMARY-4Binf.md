@@ -1,6 +1,10 @@
 # Summary
 
 - [Benvenuti](./README.md)
-- [Sviluppo software: le origini](./chap1/01-README.md)
-- [Agile/Scrum](./chap1/02-agile-scrum.md)
-- [Design](./chap1/03-design.md)
+- [Sviluppo software](./chap1/00-README.md)
+  - [Le origini](./chap1/01-origini.md)
+  - [Agile](./chap1/02-agile.md)
+  - [Scrum](./chap1/03-scrum.md)
+- [Design](./chap2/00-README.md)
+  - [Brainstorming](./chap2/01-brainstorming.md)
+  - [Brief](./chap2/02-brief.md)
