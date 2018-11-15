@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Scrum - TPSI - Sviluppo Web Application - Verifica</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Materiale di supporto alle lezioni.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li><a href="../chap1/00-README.html"><strong aria-hidden="true">2.</strong> Sviluppo software</a></li><li><ol class="section"><li><a href="../chap1/01-origini.html"><strong aria-hidden="true">2.1.</strong> Le origini</a></li><li><a href="../chap1/02-agile.html"><strong aria-hidden="true">2.2.</strong> Agile</a></li><li><a href="../chap1/03-scrum.html" class="active"><strong aria-hidden="true">2.3.</strong> Scrum</a></li></ol></li><li><a href="../chap2/00-README.html"><strong aria-hidden="true">3.</strong> Design</a></li><li><ol class="section"><li><a href="../chap2/01-brainstorming.html"><strong aria-hidden="true">3.1.</strong> Brainstorming</a></li><li><a href="../chap2/02-brief.html"><strong aria-hidden="true">3.2.</strong> Brief</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">TPSI - Sviluppo Web Application - Verifica</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#scrum" id="scrum"><h1>Scrum</h1></a>
+<p>Scrum è un framework agile nato per lo sviluppo software, ma è attualmente usato anche per realizzare altri tipi di progetti non informatici.</p>
+<p>Si basa su:</p>
+<ul>
+<li>piccoli gruppi di lavoro, dalle 5 alle 9 persone</li>
+<li>la divisione del ruolo tradizionale del product manager in più ruoli</li>
+<li>cicli di iterazione brevi, detti anche <em>sprint</em>, tipicamente due settimane</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Ken_Schwaber">Ken Schwaber</a> e <a href="https://en.wikipedia.org/wiki/Jeff_Sutherland">Jeff Sutherland</a> sono tra i fondatori di questo framework, negli anni '90, ed hanno partecipato alla scrittura del manifesto Agile nel 2001.</p>
+<p>Noi applicheremo il framework Scrum a scuola, che è un contesto diverso rispetto a quello aziendale per cui è nato. Per questo motivo apporteremo alcune modifiche, in particolare il nostro team sarà composto da 3 studenti più il docente, come vedremo.</p>
+<a class="header" href="#i-3-ruoli-scrum" id="i-3-ruoli-scrum"><h2>I 3 ruoli Scrum</h2></a>
+<p>Il team scrum prevede che ad ogni membro del team venga assegnato un ruolo ben definito.</p>
+<blockquote>
+<p>Tradizionalmente esisteva la figura del Product Manager che aveva molti compiti e responsabilità, tra cui:</p>
+<ul>
+<li>definire gli obiettivi e le scadenze</li>
+<li>assegnare le attività</li>
+<li>interfacciarsi con i livelli alti dell'azienda ed il cliente</li>
+<li>validare i requisiti</li>
+<li>decidere se gli obiettivi sono stati raggiunti</li>
+<li>fare da coach a tutti</li>
+<li>assicurarsi che siano seguite le linee guida aziendali</li>
+</ul>
+<p>Tutte le altre persone del team erano sostanzialmente dei semplici esecutori, con poteri decisionali molto limitati.</p>
+<p>Questo modello si è rivelato un fallimento, per motivi abbastanza evidenti: una singola persona non può avere né il tempo né tutte le capacità tecniche e relazionali richieste. Scrum vuole quindi suddividere questi compiti in più ruoli e più figure all'interno del team.</p>
+</blockquote>
+<a class="header" href="#team-di-sviluppo-self-organizing" id="team-di-sviluppo-self-organizing"><h3>Team di sviluppo (self-organizing)</h3></a>
+<p>Fanno parte del team di sviluppo i programmatori che andranno effettivamente a realizzare e testare il codice.</p>
+<p>Il team di sviluppo scrum si dice che si auto-organizza (self-organizing) perché ha le seguenti caratteristiche.</p>
+<ul>
+<li>decide autonomamente come dividersi il lavoro: i task non vengono assegnati ai singoli individui dall'esterno ma i membri del team si dividono i compiti tra di loro in autonomia</li>
+<li>decide autonomamente il tempo necessario ad implementare i singoli task</li>
+<li>può scegliere gli strumenti e le tecnologie da usare per raggiungere gli obiettivi, all'interno delle linee guida aziendali</li>
+<li>dimostra il lavoro realizzato al Product Owner per validazione ed accettazione</li>
+</ul>
+<a class="header" href="#product-owner" id="product-owner"><h3>Product Owner</h3></a>
+<p>La responsabilità principale del Product Owner è che il prodotto rispetti le aspettative del cliente.</p>
+<p>Nel dettaglio:</p>
+<ul>
+<li>definisce le funzionalità del progetto</li>
+<li>decide le date di rilascio ed il relativo contenuto</li>
+<li>responsabile del ROI (Return On Investment)</li>
+<li>può cambiare funzionalità solo oltre i 30 giorni</li>
+<li>accetta o rifiuta il lavoro del team</li>
+</ul>
+<p>Il Product Owner <strong>non</strong> è equivalente al tradizionale Product Manager: ha infatti solo parte delle responsabilità di quest'ultimo. Inoltre non è il <em>capo</em>, dimenticatevi questa organizzazione gerarchica all'interno del team: tutti i membri sono pari, con ruoli e responsabilità differenti.</p>
+<a class="header" href="#scrum-master" id="scrum-master"><h3>Scrum Master</h3></a>
+<p>Lo Scrum Master deve assicurarsi che il team sia produttivo e che il metodo Scrum sia applicato correttamente.</p>
+<p>In particolare:</p>
+<ul>
+<li>rimuove gli impedimenti, ad esempio computer rotti, licecnze mancanti, problemi burocratici, etc.</li>
+<li>si assicura che le regole scrum e le linee guida aziendali siano rispettate</li>
+<li>protegge il team dalle interferenze esterne (amministratore delegato invadente, clienti ansiosi, etc.)</li>
+</ul>
+<p>Lo Scrum Master è un po' il vigile del team, che si assicura che tutto vada per il verso giusto. È la figura meno coinvolta nello specifico progetto, e non è raro che segua più progetti contemporaneamente o che sia esterno all'azienda.</p>
+<p>Nel nostro caso, il vostro Scrum Master è il docente, che quindi avrà questo ruolo in tutti i team della classe.</p>
+<a class="header" href="#ciclo-di-sviluppo" id="ciclo-di-sviluppo"><h2>Ciclo di sviluppo</h2></a>
+<p>Il ciclo di sviluppo Scrum è tipicamente di due settimane, al termine del quale si deve presentare un piccolo <em>prototipo funzionante</em>.</p>
+<p>In altre parole, Scrum (ed in generale Agile) si concentra sul fatto che bisogna <strong>rilasciare il più frequentemente possibile</strong> dei prodotti che possano essere testati non solo dal team di sviluppo, ma anche dal cliente ed eventualmente dal cliente finale per <strong>ricevere feedback</strong> il prima possibile.</p>
+<p>Volendo fare il classico paragone con la creazione di una macchina, in Scrum si sviluppa prima un triciclo, poi una bicicletta, poi un motorino, e così via fino ad arrivare al prodotto finale. Questo si contrappone al tradizionale metodo di sviluppare i componenti finali separatamente: prima il motore, poi la carrozzeria, le ruote, etc. In questo modo si può provare il prodotto (la macchina) solo alla fine del progetto. È abbastanza evidente quindi che il metodo Scrum è più adatto nei constesti in cui i requisiti sono incerti e mutevoli, mentre il metodo tradizionale dove si ha la ragionevole certezza che nulla cambierà durante lo sviluppo del prodotto. Nel mondo contemporaneo, tuttavia, quest'ultima situazione non accade praticamente mai.</p>
+<p>Ogni ciclo di sviluppo in termine tecnico viene chiamato anche <strong>sprint</strong>.</p>
+<p>Nel nostro contesto scuola, adatteremo la lunghezza dello sprint in base alle esigenze del calendario scolastico.</p>
+<a class="header" href="#meetings" id="meetings"><h2>Meetings</h2></a>
+<p>Il ciclo di sviluppo Scrum prevede i seguenti incontri:</p>
+<ul>
+<li>planning meeting, all'inizio dello sprint</li>
+<li>review meeting, alla fine dello sprint</li>
+<li>daily meeting, ogni giorno</li>
+</ul>
+<blockquote>
+<p>Può esserci un ulteriore incontro chiamato &quot;retrospettiva&quot;, dopo la review, dove si analizza cosa è andato bene e cosa male, e come migliorare.</p>
+</blockquote>
+<a class="header" href="#planning-meeting" id="planning-meeting"><h3>Planning meeting</h3></a>
+<p>Si decidono le <strong>storie</strong> ed i <strong>task</strong> da realizzare nello Sprint che sta iniziando.</p>
+<a class="header" href="#storie" id="storie"><h4>Storie</h4></a>
+<p>Le storie sono la forma con cui si definiscono i requisiti in Scrum. Hanno un aspetto più informale rispetto ai requisiti classici, e si concentrano sulla <em>narrazione</em> del progetto, in modo tale che ogni progetto non sia solo un insieme di cose da fare ma acquisisca un <em>senso</em> chiaro e definito sia nelle menti sia del cliente che degli sviluppatori</p>
+<p>Ogni storia ha la forma:
+<center>
+Come <code>qualcuno</code>, voglio che <code>qualcosa</code> perché <code>valore</code>.
+</center></p>
+<p>Come ogni storia che conosciamo, gli elementi fondamentali sono: i personaggi (<em>qualcuno</em>), l'azione (<em>qualcosa</em>) ed il fine che muove il personaggio all'azione (<em>valore</em>). Le storie devono essere scritte in modo che possano essere comprese da chiunque, quindi non devono contenere termini tecnici, perché sono il mezzo di comunicazione scritto privilegiato tra tutti i membri del team, dell'azienda e con il cliente.</p>
+<p>Dopo aver definito le storie, queste vanno messe in <strong>priorità</strong> dal Product Owner. Si comincieranno ad implementare quindi prima le storie con priorità più alta.</p>
+<a class="header" href="#task" id="task"><h4>Task</h4></a>
+<p>Le storie solitamente, prima di essere implementate, devono essere suddivise in <em>task</em> operativi che contengono invece i dettagli su cosa in pratica deve essere fatto. I task possono contenere anche un linguaggio tecico, perché sono strumenti interni al team di sviluppo, di solito non escono fuori da quest'ambito.</p>
+<a class="header" href="#punti" id="punti"><h4>Punti</h4></a>
+<p>Ad ogni storia o task vengono inoltre assegnati dei punti, che ne definiscono la <em>difficoltà</em>. Ad esempio:</p>
+<ul>
+<li>1 punto: facilissimo</li>
+<li>2 punti: facile</li>
+<li>4 punti: impegnativo</li>
+<li>8 punti: esageratamente impegnativo</li>
+</ul>
+<p>Si preferisce assegnare punti e non ore alle singole storie, perché per gli esseri umani è molto più facile valutare la difficoltà di un compito che il suo tempo di esecuzione, e quindi alla fine la stima viene più precisa. Inoltre evita che si creeino situazioni di tensione, spesso inutili, nel caso in cui i tempi non vengano rispettati esattamente.</p>
+<p>Ogni team ha un proprio numero di punti che riesce a completare in uno sprint, chiamato velocità (<em>velocity</em>). La velocity viene calcolata empiricamente dopo un certo numero di sprint. Per ogni sprint, si possono pianificare un numero di punti uguale o inferiori alla velocity fissata, <strong>mai</strong> un numero maggiore: infatti non è teoricamente corretto prevedere di fare straordinari già in fase di planning. Scrum insiste molto sul fatto che il ritmo di lavoro deve essere sostenibile, e che non bisogna fare continuamente sforzi oltre le proprie possibilità.</p>
+<a class="header" href="#storytask-owner" id="storytask-owner"><h4>Story/task owner</h4></a>
+<p>Ad ogni storia o task si assegna un proprietario (owner), in modo che sia chiaro chi è che ha la responsabilità che quella storia o task venga completata.</p>
+<a class="header" href="#note" id="note"><h4>Note</h4></a>
+<p>Le storie devono essere tra di loro quanto più possibili indipendenti, da eseguire in serie o in parallelo, ma non intrecciarsi fra di loro. Se questo accade, conviene spezzare le storie, per renderle indipendenti.</p>
+<a class="header" href="#esecuzione" id="esecuzione"><h3>Esecuzione</h3></a>
+<p>In questa fase ogni membro del team di sviluppo implementa le proprie storie o task. Quando comincia l'implementazione, lo sviluppatore segna il task o la storia in &quot;Work in progress&quot; nel cartellone del team o qualche altro strumento di tracciamento, anche digitale. Man mano che li completa, segna la storia o task come completato (done) e passa al successivo. Ad ogni momento, ognuno deve essere su un unico task.</p>
+<p>Non è possibile cambiare i storie o task in questa fare, per nessun motivo, neanche da parte dell'amministratore dell'azienda o del cliente: è cura dello Scrum Master assicurarsi di questo.</p>
+<a class="header" href="#review-meeting" id="review-meeting"><h3>Review meeting</h3></a>
+<p>Alla fine della fase di esecuzione, i vari owner dimostrano le storie e task <strong>che hanno completato</strong> al Product Owner, che valuta se sono effettivamente complete come si aspetta il cliente, o c'è qualcosa di incogruente e devono essere riviste. Quest'ultime devono essere sempre ri-pianificate nello sprint successivo e ricominciare il ciclo, non possono per nessun motivo essere &quot;corrette al volo&quot;, perché in questo modo si perde facilmente il controllo della situazione.</p>
+<p>Attenzione: <strong>non</strong> si possono dimostrare <strong>storie incomplete</strong> (non in done), anche se manca solo il 10%: una storia o è completa, o è fallita, nessuna via di mezzo. Una storia parzialmente completa si considera fallita e si rivaluta nella pianificazione successiva. Il Product Owner decide se le storie sono effettivamente complete o no.</p>
+<p>Lo Scrum Master si assicura che tutto il processo sia eseguito correttamente.</p>
+<a class="header" href="#daily-meeting" id="daily-meeting"><h3>Daily meeting</h3></a>
+<p>C'è un ulteriore importante cerimonia Scrum che si celebra ogni mattina, il <em>&quot;Daily Meeting&quot;</em>: è un incontro giornaliero di massimo 15 minuti, <em>interno al team</em> (gli esterni non possono partecipare), in cui ci si assicura che tutto stia procedendo come previsto. Visto che i partecipanti devono stare in piedi per favorire la concentrazione, viene anche detto &quot;Stand-up meeting&quot;. Noi non faremo ogni giorno perché sarebbe molto difficile da eseguire nel contesto scolastico, ma vediamo se riusciamo a inserirlo in qualche occasione.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../chap1/02-agile.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../chap2/00-README.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../chap1/02-agile.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../chap2/00-README.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

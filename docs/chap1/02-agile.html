@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Agile - TPSI - Sviluppo Web Application - Verifica</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Materiale di supporto alle lezioni.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li><a href="../chap1/00-README.html"><strong aria-hidden="true">2.</strong> Sviluppo software</a></li><li><ol class="section"><li><a href="../chap1/01-origini.html"><strong aria-hidden="true">2.1.</strong> Le origini</a></li><li><a href="../chap1/02-agile.html" class="active"><strong aria-hidden="true">2.2.</strong> Agile</a></li><li><a href="../chap1/03-scrum.html"><strong aria-hidden="true">2.3.</strong> Scrum</a></li></ol></li><li><a href="../chap2/00-README.html"><strong aria-hidden="true">3.</strong> Design</a></li><li><ol class="section"><li><a href="../chap2/01-brainstorming.html"><strong aria-hidden="true">3.1.</strong> Brainstorming</a></li><li><a href="../chap2/02-brief.html"><strong aria-hidden="true">3.2.</strong> Brief</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">TPSI - Sviluppo Web Application - Verifica</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#agile" id="agile"><h1>Agile</h1></a>
+<p>Dopo il CHAOS Report del 1994, un gruppo di consulenti software si è messo al lavoro per ragionare su nuove metodologie di sviluppo. I problemi identificati alla base degli insuccessi nello sviluppo software riguardavano soprattutto l'impossibilità di elencare tutti i requisiti all'inizio del progetto e considerarli immutabili, e i rapporti interpersonali all'interno del team e verso l'esterno.</p>
+<p>Ci fu un incontro storico nella località sciistica di Snowbird, in Utah (USA) nel 2001, durante il quale pubblicarono il <a href="http://agilemanifesto.org/">manifesto Agile</a>, contenente i valori e principi che secondo loro dovevano essere alla base di un buon progetto software per avere le maggiori probabilità di riuscire.</p>
+ <div>
+ <p align="center">
+ <img title="Agile manifesto" src='./assets/agile-manifesto.png' width='70%'>
+ </p>
+ <p align="center">
+ <em>www.agilemanifesto.org</em>
+ </p>
+ </div>
+<a class="header" href="#i-4-valori-agile" id="i-4-valori-agile"><h2>I 4 valori Agile</h2></a>
+<p>Alla base delle metodologie Agile ci sono 4 valori fondamentali.</p>
+<p><center>
+<br>
+<strong>Individuals and interactions</strong> over processes and tools
+<br>
+<br>
+<strong>Working software</strong> over comprehensive documentation
+<br>
+<br>
+<strong>Customer collaboration</strong> over contract negotiation
+<br>
+<br>
+<strong>Responding to change</strong> over following a plan
+<br>
+<br>
+</center></p>
+<p>In ognuno dei valori, la parte a destra è importante, ma quella a sinistra è considerata più importante. Tutte le metodologie Agile si basano su questi valori, e compiono delle scelte significative di conseguenza.</p>
+<a class="header" href="#individuals-and-interactions-over-processes-and-tools" id="individuals-and-interactions-over-processes-and-tools"><h3>Individuals and interactions over processes and tools</h3></a>
+<p>Definire dei processi e degli strumenti aziendali è importante, ma non bisogna mai dimenticarsi che il software alla fine è sviluppato da persone che usano strumenti e processi, non dagli strumenti e processi da soli. Qualsiasi strumento usato male o controvoglia non può funzionare. Al contrario, un piccolo gruppo di persone può realizzare grandi risultati se c'è affiatamento e determinazione.</p>
+<p>Sulla base di questo valore, quando qualcuno del team ha un problema ad usare uno strumento o a seguire un processo, bisogna cercare di favorire sempre la persona, e riadattare processi e strumenti di conseguenza.</p>
+<a class="header" href="#working-software-over-comprehensive-documentation" id="working-software-over-comprehensive-documentation"><h3>Working software over comprehensive documentation</h3></a>
+<p>Un prodotto software senza documentazione può essere difficile da mantenere, e questo è tristemente noto alla maggior parte degli utenti e sviluppatori. Tuttavia, un software che non funziona è impossibile da usare, con tutta la buona volontà, ed è quindi inutile. Nello sviluppo del prodotto quindi è preferibile concentrarsi maggiormente sul far funzionare il software rispetto a scrivere una documentazione perfetta e completa di qualcosa che non esiste.</p>
+<p>Attenzione: quando qui parliamo di documentazione, intendiamo quella necessaria <em>allo sviluppo interno del progetto</em>, in altre parole quella interna all'azienda, e <em>non</em> la documentazione per l'utente finale. La documentazione finale può essere considerata parte integrante del prodotto, e va quindi realizzata e completata come tutto il resto del software.</p>
+<a class="header" href="#customer-collaboration-over-contract-negotiation" id="customer-collaboration-over-contract-negotiation"><h3>Customer collaboration over contract negotiation</h3></a>
+<p>I contratti firmati sono necessari per partire con un lavoro e accordarsi sui punti fondamentali, ma non devono essere una scusa dietro cui nascondersi. Se c'è qualche imprevisto e qualcosa sta andando storto, meglio avvertire il cliente il prima possibile e renderlo partecipe dei problemi, cercando una possibile soluzione. In ogni caso, mai rendere noti i problemi a ridosso della consegna, o peggio ancora inventare scuse.</p>
+<p>Questo punto, similmente al primo, mette al primo posto le persone rispetto agli strumenti e alle carte. In questo caso però l'attenzione è rivolta verso l'esterno del team e dell'azienda.</p>
+<a class="header" href="#responding-to-change-over-following-a-plan" id="responding-to-change-over-following-a-plan"><h3>Responding to change over following a plan</h3></a>
+<p>La capacità di seguire un piano prestabilito è una delle caratteristiche fondamentali che distinguono uno sviluppatore professionista. Tuttavia i requisti del cliente cambiano, così come le situazioni all'interno dell'azienda, e gli imprevisti capitano continuamente. Un framework Agile deve incorporare strutturalmente la capacità di reagire ai cambiamenti e agli imprevisti, minimizzando problemi e danni.</p>
+<p>Attenzione però a non esagerare dal lato opposto: se i piani cambiano <em>troppo</em> frequentemente, si arriva a quella che si può chiamare <em>pianificazione isterica</em>, in cui tutto cambia continuamente e non si arriva mai a destinazione. Un buon framework deve trovare il bilanciamento fra questi due aspetti.</p>
+<a class="header" href="#i-framework-agile" id="i-framework-agile"><h2>I framework Agile</h2></a>
+<p>Nella pratica, come facciamo a implementare questi valori?</p>
+<p>Esistono varie proposte concrete, chiamate <em>metodologie</em> o <em>framework</em>, che sono nate nel corso degli anni. Le più importanti sono:</p>
+<ul>
+<li><a href="https://it.wikipedia.org/wiki/Scrum_(informatica)">Scrum[1990s]</a>: uno dei primi framework, nato già prima della pubblicazione del manifesto; definisce piccoli team (dalle 5 alle 9 persone), cicli iterazione brevi (dalle 2 alle 4 settimane), e una chiara definizione dei ruoli.</li>
+<li><a href="http://www.extremeprogramming.org">eXtreme Programming [1996]</a>: molto orientato ai programmatori, si concetra sulla negoziazione continua tra sviluppatore e cliente, ha cicli di iterazione brevissimi (1 giorno), si basa sul <a href="https://it.wikipedia.org/wiki/Pair_programming">pair programming</a> e sul <a href="https://it.wikipedia.org/wiki/Test_driven_development">Test Driven Development</a></li>
+<li><a href="https://it.wikipedia.org/wiki/Lean_software_development">Lean [2003]</a>: è la trasposizione per lo sviluppo SW del Lean Manufacturing di Toyota, si focalizza sull’eliminazione dello spreco (waste) e cerca di ritardare le decisioni il più possibile</li>
+</ul>
+<p>In questo corso noi approfondiremo il framework Scrum.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../chap1/01-origini.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../chap1/03-scrum.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../chap1/01-origini.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../chap1/03-scrum.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

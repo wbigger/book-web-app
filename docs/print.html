@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>TPSI - Sviluppo Web Application - Verifica</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Materiale di supporto alle lezioni.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="index.html"><strong aria-hidden="true">1.</strong> Benvenuti</a></li><li><a href="chap1/00-README.html"><strong aria-hidden="true">2.</strong> Sviluppo software</a></li><li><ol class="section"><li><a href="chap1/01-origini.html"><strong aria-hidden="true">2.1.</strong> Le origini</a></li><li><a href="chap1/02-agile.html"><strong aria-hidden="true">2.2.</strong> Agile</a></li><li><a href="chap1/03-scrum.html"><strong aria-hidden="true">2.3.</strong> Scrum</a></li></ol></li><li><a href="chap2/00-README.html"><strong aria-hidden="true">3.</strong> Design</a></li><li><ol class="section"><li><a href="chap2/01-brainstorming.html"><strong aria-hidden="true">3.1.</strong> Brainstorming</a></li><li><a href="chap2/02-brief.html"><strong aria-hidden="true">3.2.</strong> Brief</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">TPSI - Sviluppo Web Application - Verifica</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#sviluppo-web-application" id="sviluppo-web-application"><h1>Sviluppo Web Application</h1></a>
+<p><strong>A.S. 2018-2019</strong></p>
+<p><strong>Istituto di Istruzione Superiore G. Marconi</strong></p>
+<p><strong>TPSI</strong></p>
+<p>Benvenuti ragazzi!</p>
+<p>Questo materiale riepiloga quanto detto a lezione negli scorsi giorni.</p>
+<p>Le risposte alle domande dei compiti in classe sono tutte incluse in questo materiale.</p>
+<p>I riferimenti al libro di testo sono tra parentesi quadre, come ad esempio [pag. 1].</p>
+<blockquote>
+<p>Il testo in questi box sono per approfondimento. La lettura di questo materiale non è strettamente
+necessaria per le verifiche, ma è consigliata per vostra cultura personale e in quanto
+sapere indispensabile per chi vuole diventare un informatico.</p>
+</blockquote>
+<p>Buon studio e buon lavoro.</p>
+<a class="header" href="#sviluppo-software" id="sviluppo-software"><h1>Sviluppo software</h1></a>
+<p>In questo capitolo vedremo quali sono i buoni principi alla base dello sviluppo software ai giorni nostri.</p>
+<a class="header" href="#breve-storia-dello-sviluppo-software" id="breve-storia-dello-sviluppo-software"><h1>Breve storia dello sviluppo software</h1></a>
+<p>In questo corso impareremo a sviluppare una applicazione web in HTML5.</p>
+<p>Sviluppare una applicazione per il web può sembrare inizalmente semplice,
+perché le tecnologie base usate (HTML5, browser) sono molto diffuse e abbastanza semplici da usare. Tuttavia, ci sono delle insidie nascoste: le applicazioni web oggi devono soddisfare le esigenze di un mondo che cambia velocemente, sia per quanto
+riguarda il mercato, sia per le le tecnologie al contorno utilizzate, ad esempio i dispositivi, le librerie software usate, etc.</p>
+<p>Per evitare problemi ricorrenti, nel corso del tempo sono si sono consolidate delle strategie di sviluppo che si sono dimostrate efficaci. Facciamo un rapido riepilogo storico per vedere come siamo arrivati alle metodologie che useremo in questo corso.</p>
+<a class="header" href="#le-origini-le-fasi-di-un-progetto-ed-il-metodo-waterfall" id="le-origini-le-fasi-di-un-progetto-ed-il-metodo-waterfall"><h2>Le origini: le fasi di un progetto ed il metodo Waterfall</h2></a>
+<p>Nel 1970, Winston W. Royce era direttore del Software Technology Center della Lockheed Martin ad Austin, in Texas. Fu un pioniere dello sviluppo software, e in un suo celebre articolo descrisse <strong>le 5 fasi necessarie per la realizzazione di un prodotto software</strong>:</p>
+<ol>
+<li>Analisi dei requisiti</li>
+<li>Design</li>
+<li>Implementazione (coding)</li>
+<li>Testing</li>
+<li>Manutenzione</li>
+</ol>
+<p>Questo flusso divenne in seguito noto come <strong>waterfall</strong>. Con il passare degli anni e la prova sul campo, si è visto che queste 5 fasi sono teoricamente corrette, ma capitava troppo spesso che imprevisti di vario genere facessero rallentare o fermare del tutto il progetto.</p>
+<p>I problemi divennero evidenti quando una celebre statistica del 1994, chiamata <a href="http://www.standishgroup.com/outline">CHAOS Report</a>, mostrò come il <strong>96%</strong> dei progetti software analizzati non fossero stati completati   fase hanno statisticamente un'alta percentuale di fallimento.</p>
+<div>
+<p align="center">
+<img title="chaos report" src='./assets/chaos.png' width='50%'>
+</p>
+<p align="center">
+<em>Fonte: CHAOS Report 1995</em>
+</p>
+</div>
+<ul>
+<li>Type 1: progetti conclusi con le funzionalità previste, nel rispetto del budget e dei tempi di consegna</li>
+<li>Type 2: progetti conclusi ma con meno funzionalità di quelle previste, o non rispettando il budget o i tempi di consegna</li>
+<li>Type 3: progetti abortiti durante lo sviluppo</li>
+</ul>
+<p>Era evidente ormai che serviva qualche modifica a modello waterfall.</p>
+<a class="header" href="#agile" id="agile"><h1>Agile</h1></a>
+<p>Dopo il CHAOS Report del 1994, un gruppo di consulenti software si è messo al lavoro per ragionare su nuove metodologie di sviluppo. I problemi identificati alla base degli insuccessi nello sviluppo software riguardavano soprattutto l'impossibilità di elencare tutti i requisiti all'inizio del progetto e considerarli immutabili, e i rapporti interpersonali all'interno del team e verso l'esterno.</p>
+<p>Ci fu un incontro storico nella località sciistica di Snowbird, in Utah (USA) nel 2001, durante il quale pubblicarono il <a href="http://agilemanifesto.org/">manifesto Agile</a>, contenente i valori e principi che secondo loro dovevano essere alla base di un buon progetto software per avere le maggiori probabilità di riuscire.</p>
+ <div>
+ <p align="center">
+ <img title="Agile manifesto" src='./assets/agile-manifesto.png' width='70%'>
+ </p>
+ <p align="center">
+ <em>www.agilemanifesto.org</em>
+ </p>
+ </div>
+<a class="header" href="#i-4-valori-agile" id="i-4-valori-agile"><h2>I 4 valori Agile</h2></a>
+<p>Alla base delle metodologie Agile ci sono 4 valori fondamentali.</p>
+<p><center>
+<br>
+<strong>Individuals and interactions</strong> over processes and tools
+<br>
+<br>
+<strong>Working software</strong> over comprehensive documentation
+<br>
+<br>
+<strong>Customer collaboration</strong> over contract negotiation
+<br>
+<br>
+<strong>Responding to change</strong> over following a plan
+<br>
+<br>
+</center></p>
+<p>In ognuno dei valori, la parte a destra è importante, ma quella a sinistra è considerata più importante. Tutte le metodologie Agile si basano su questi valori, e compiono delle scelte significative di conseguenza.</p>
+<a class="header" href="#individuals-and-interactions-over-processes-and-tools" id="individuals-and-interactions-over-processes-and-tools"><h3>Individuals and interactions over processes and tools</h3></a>
+<p>Definire dei processi e degli strumenti aziendali è importante, ma non bisogna mai dimenticarsi che il software alla fine è sviluppato da persone che usano strumenti e processi, non dagli strumenti e processi da soli. Qualsiasi strumento usato male o controvoglia non può funzionare. Al contrario, un piccolo gruppo di persone può realizzare grandi risultati se c'è affiatamento e determinazione.</p>
+<p>Sulla base di questo valore, quando qualcuno del team ha un problema ad usare uno strumento o a seguire un processo, bisogna cercare di favorire sempre la persona, e riadattare processi e strumenti di conseguenza.</p>
+<a class="header" href="#working-software-over-comprehensive-documentation" id="working-software-over-comprehensive-documentation"><h3>Working software over comprehensive documentation</h3></a>
+<p>Un prodotto software senza documentazione può essere difficile da mantenere, e questo è tristemente noto alla maggior parte degli utenti e sviluppatori. Tuttavia, un software che non funziona è impossibile da usare, con tutta la buona volontà, ed è quindi inutile. Nello sviluppo del prodotto quindi è preferibile concentrarsi maggiormente sul far funzionare il software rispetto a scrivere una documentazione perfetta e completa di qualcosa che non esiste.</p>
+<p>Attenzione: quando qui parliamo di documentazione, intendiamo quella necessaria <em>allo sviluppo interno del progetto</em>, in altre parole quella interna all'azienda, e <em>non</em> la documentazione per l'utente finale. La documentazione finale può essere considerata parte integrante del prodotto, e va quindi realizzata e completata come tutto il resto del software.</p>
+<a class="header" href="#customer-collaboration-over-contract-negotiation" id="customer-collaboration-over-contract-negotiation"><h3>Customer collaboration over contract negotiation</h3></a>
+<p>I contratti firmati sono necessari per partire con un lavoro e accordarsi sui punti fondamentali, ma non devono essere una scusa dietro cui nascondersi. Se c'è qualche imprevisto e qualcosa sta andando storto, meglio avvertire il cliente il prima possibile e renderlo partecipe dei problemi, cercando una possibile soluzione. In ogni caso, mai rendere noti i problemi a ridosso della consegna, o peggio ancora inventare scuse.</p>
+<p>Questo punto, similmente al primo, mette al primo posto le persone rispetto agli strumenti e alle carte. In questo caso però l'attenzione è rivolta verso l'esterno del team e dell'azienda.</p>
+<a class="header" href="#responding-to-change-over-following-a-plan" id="responding-to-change-over-following-a-plan"><h3>Responding to change over following a plan</h3></a>
+<p>La capacità di seguire un piano prestabilito è una delle caratteristiche fondamentali che distinguono uno sviluppatore professionista. Tuttavia i requisti del cliente cambiano, così come le situazioni all'interno dell'azienda, e gli imprevisti capitano continuamente. Un framework Agile deve incorporare strutturalmente la capacità di reagire ai cambiamenti e agli imprevisti, minimizzando problemi e danni.</p>
+<p>Attenzione però a non esagerare dal lato opposto: se i piani cambiano <em>troppo</em> frequentemente, si arriva a quella che si può chiamare <em>pianificazione isterica</em>, in cui tutto cambia continuamente e non si arriva mai a destinazione. Un buon framework deve trovare il bilanciamento fra questi due aspetti.</p>
+<a class="header" href="#i-framework-agile" id="i-framework-agile"><h2>I framework Agile</h2></a>
+<p>Nella pratica, come facciamo a implementare questi valori?</p>
+<p>Esistono varie proposte concrete, chiamate <em>metodologie</em> o <em>framework</em>, che sono nate nel corso degli anni. Le più importanti sono:</p>
+<ul>
+<li><a href="https://it.wikipedia.org/wiki/Scrum_(informatica)">Scrum[1990s]</a>: uno dei primi framework, nato già prima della pubblicazione del manifesto; definisce piccoli team (dalle 5 alle 9 persone), cicli iterazione brevi (dalle 2 alle 4 settimane), e una chiara definizione dei ruoli.</li>
+<li><a href="http://www.extremeprogramming.org">eXtreme Programming [1996]</a>: molto orientato ai programmatori, si concetra sulla negoziazione continua tra sviluppatore e cliente, ha cicli di iterazione brevissimi (1 giorno), si basa sul <a href="https://it.wikipedia.org/wiki/Pair_programming">pair programming</a> e sul <a href="https://it.wikipedia.org/wiki/Test_driven_development">Test Driven Development</a></li>
+<li><a href="https://it.wikipedia.org/wiki/Lean_software_development">Lean [2003]</a>: è la trasposizione per lo sviluppo SW del Lean Manufacturing di Toyota, si focalizza sull’eliminazione dello spreco (waste) e cerca di ritardare le decisioni il più possibile</li>
+</ul>
+<p>In questo corso noi approfondiremo il framework Scrum.</p>
+<a class="header" href="#scrum" id="scrum"><h1>Scrum</h1></a>
+<p>Scrum è un framework agile nato per lo sviluppo software, ma è attualmente usato anche per realizzare altri tipi di progetti non informatici.</p>
+<p>Si basa su:</p>
+<ul>
+<li>piccoli gruppi di lavoro, dalle 5 alle 9 persone</li>
+<li>la divisione del ruolo tradizionale del product manager in più ruoli</li>
+<li>cicli di iterazione brevi, detti anche <em>sprint</em>, tipicamente due settimane</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Ken_Schwaber">Ken Schwaber</a> e <a href="https://en.wikipedia.org/wiki/Jeff_Sutherland">Jeff Sutherland</a> sono tra i fondatori di questo framework, negli anni '90, ed hanno partecipato alla scrittura del manifesto Agile nel 2001.</p>
+<p>Noi applicheremo il framework Scrum a scuola, che è un contesto diverso rispetto a quello aziendale per cui è nato. Per questo motivo apporteremo alcune modifiche, in particolare il nostro team sarà composto da 3 studenti più il docente, come vedremo.</p>
+<a class="header" href="#i-3-ruoli-scrum" id="i-3-ruoli-scrum"><h2>I 3 ruoli Scrum</h2></a>
+<p>Il team scrum prevede che ad ogni membro del team venga assegnato un ruolo ben definito.</p>
+<blockquote>
+<p>Tradizionalmente esisteva la figura del Product Manager che aveva molti compiti e responsabilità, tra cui:</p>
+<ul>
+<li>definire gli obiettivi e le scadenze</li>
+<li>assegnare le attività</li>
+<li>interfacciarsi con i livelli alti dell'azienda ed il cliente</li>
+<li>validare i requisiti</li>
+<li>decidere se gli obiettivi sono stati raggiunti</li>
+<li>fare da coach a tutti</li>
+<li>assicurarsi che siano seguite le linee guida aziendali</li>
+</ul>
+<p>Tutte le altre persone del team erano sostanzialmente dei semplici esecutori, con poteri decisionali molto limitati.</p>
+<p>Questo modello si è rivelato un fallimento, per motivi abbastanza evidenti: una singola persona non può avere né il tempo né tutte le capacità tecniche e relazionali richieste. Scrum vuole quindi suddividere questi compiti in più ruoli e più figure all'interno del team.</p>
+</blockquote>
+<a class="header" href="#team-di-sviluppo-self-organizing" id="team-di-sviluppo-self-organizing"><h3>Team di sviluppo (self-organizing)</h3></a>
+<p>Fanno parte del team di sviluppo i programmatori che andranno effettivamente a realizzare e testare il codice.</p>
+<p>Il team di sviluppo scrum si dice che si auto-organizza (self-organizing) perché ha le seguenti caratteristiche.</p>
+<ul>
+<li>decide autonomamente come dividersi il lavoro: i task non vengono assegnati ai singoli individui dall'esterno ma i membri del team si dividono i compiti tra di loro in autonomia</li>
+<li>decide autonomamente il tempo necessario ad implementare i singoli task</li>
+<li>può scegliere gli strumenti e le tecnologie da usare per raggiungere gli obiettivi, all'interno delle linee guida aziendali</li>
+<li>dimostra il lavoro realizzato al Product Owner per validazione ed accettazione</li>
+</ul>
+<a class="header" href="#product-owner" id="product-owner"><h3>Product Owner</h3></a>
+<p>La responsabilità principale del Product Owner è che il prodotto rispetti le aspettative del cliente.</p>
+<p>Nel dettaglio:</p>
+<ul>
+<li>definisce le funzionalità del progetto</li>
+<li>decide le date di rilascio ed il relativo contenuto</li>
+<li>responsabile del ROI (Return On Investment)</li>
+<li>può cambiare funzionalità solo oltre i 30 giorni</li>
+<li>accetta o rifiuta il lavoro del team</li>
+</ul>
+<p>Il Product Owner <strong>non</strong> è equivalente al tradizionale Product Manager: ha infatti solo parte delle responsabilità di quest'ultimo. Inoltre non è il <em>capo</em>, dimenticatevi questa organizzazione gerarchica all'interno del team: tutti i membri sono pari, con ruoli e responsabilità differenti.</p>
+<a class="header" href="#scrum-master" id="scrum-master"><h3>Scrum Master</h3></a>
+<p>Lo Scrum Master deve assicurarsi che il team sia produttivo e che il metodo Scrum sia applicato correttamente.</p>
+<p>In particolare:</p>
+<ul>
+<li>rimuove gli impedimenti, ad esempio computer rotti, licecnze mancanti, problemi burocratici, etc.</li>
+<li>si assicura che le regole scrum e le linee guida aziendali siano rispettate</li>
+<li>protegge il team dalle interferenze esterne (amministratore delegato invadente, clienti ansiosi, etc.)</li>
+</ul>
+<p>Lo Scrum Master è un po' il vigile del team, che si assicura che tutto vada per il verso giusto. È la figura meno coinvolta nello specifico progetto, e non è raro che segua più progetti contemporaneamente o che sia esterno all'azienda.</p>
+<p>Nel nostro caso, il vostro Scrum Master è il docente, che quindi avrà questo ruolo in tutti i team della classe.</p>
+<a class="header" href="#ciclo-di-sviluppo" id="ciclo-di-sviluppo"><h2>Ciclo di sviluppo</h2></a>
+<p>Il ciclo di sviluppo Scrum è tipicamente di due settimane, al termine del quale si deve presentare un piccolo <em>prototipo funzionante</em>.</p>
+<p>In altre parole, Scrum (ed in generale Agile) si concentra sul fatto che bisogna <strong>rilasciare il più frequentemente possibile</strong> dei prodotti che possano essere testati non solo dal team di sviluppo, ma anche dal cliente ed eventualmente dal cliente finale per <strong>ricevere feedback</strong> il prima possibile.</p>
+<p>Volendo fare il classico paragone con la creazione di una macchina, in Scrum si sviluppa prima un triciclo, poi una bicicletta, poi un motorino, e così via fino ad arrivare al prodotto finale. Questo si contrappone al tradizionale metodo di sviluppare i componenti finali separatamente: prima il motore, poi la carrozzeria, le ruote, etc. In questo modo si può provare il prodotto (la macchina) solo alla fine del progetto. È abbastanza evidente quindi che il metodo Scrum è più adatto nei constesti in cui i requisiti sono incerti e mutevoli, mentre il metodo tradizionale dove si ha la ragionevole certezza che nulla cambierà durante lo sviluppo del prodotto. Nel mondo contemporaneo, tuttavia, quest'ultima situazione non accade praticamente mai.</p>
+<p>Ogni ciclo di sviluppo in termine tecnico viene chiamato anche <strong>sprint</strong>.</p>
+<p>Nel nostro contesto scuola, adatteremo la lunghezza dello sprint in base alle esigenze del calendario scolastico.</p>
+<a class="header" href="#meetings" id="meetings"><h2>Meetings</h2></a>
+<p>Il ciclo di sviluppo Scrum prevede i seguenti incontri:</p>
+<ul>
+<li>planning meeting, all'inizio dello sprint</li>
+<li>review meeting, alla fine dello sprint</li>
+<li>daily meeting, ogni giorno</li>
+</ul>
+<blockquote>
+<p>Può esserci un ulteriore incontro chiamato &quot;retrospettiva&quot;, dopo la review, dove si analizza cosa è andato bene e cosa male, e come migliorare.</p>
+</blockquote>
+<a class="header" href="#planning-meeting" id="planning-meeting"><h3>Planning meeting</h3></a>
+<p>Si decidono le <strong>storie</strong> ed i <strong>task</strong> da realizzare nello Sprint che sta iniziando.</p>
+<a class="header" href="#storie" id="storie"><h4>Storie</h4></a>
+<p>Le storie sono la forma con cui si definiscono i requisiti in Scrum. Hanno un aspetto più informale rispetto ai requisiti classici, e si concentrano sulla <em>narrazione</em> del progetto, in modo tale che ogni progetto non sia solo un insieme di cose da fare ma acquisisca un <em>senso</em> chiaro e definito sia nelle menti sia del cliente che degli sviluppatori</p>
+<p>Ogni storia ha la forma:
+<center>
+Come <code>qualcuno</code>, voglio che <code>qualcosa</code> perché <code>valore</code>.
+</center></p>
+<p>Come ogni storia che conosciamo, gli elementi fondamentali sono: i personaggi (<em>qualcuno</em>), l'azione (<em>qualcosa</em>) ed il fine che muove il personaggio all'azione (<em>valore</em>). Le storie devono essere scritte in modo che possano essere comprese da chiunque, quindi non devono contenere termini tecnici, perché sono il mezzo di comunicazione scritto privilegiato tra tutti i membri del team, dell'azienda e con il cliente.</p>
+<p>Dopo aver definito le storie, queste vanno messe in <strong>priorità</strong> dal Product Owner. Si comincieranno ad implementare quindi prima le storie con priorità più alta.</p>
+<a class="header" href="#task" id="task"><h4>Task</h4></a>
+<p>Le storie solitamente, prima di essere implementate, devono essere suddivise in <em>task</em> operativi che contengono invece i dettagli su cosa in pratica deve essere fatto. I task possono contenere anche un linguaggio tecico, perché sono strumenti interni al team di sviluppo, di solito non escono fuori da quest'ambito.</p>
+<a class="header" href="#punti" id="punti"><h4>Punti</h4></a>
+<p>Ad ogni storia o task vengono inoltre assegnati dei punti, che ne definiscono la <em>difficoltà</em>. Ad esempio:</p>
+<ul>
+<li>1 punto: facilissimo</li>
+<li>2 punti: facile</li>
+<li>4 punti: impegnativo</li>
+<li>8 punti: esageratamente impegnativo</li>
+</ul>
+<p>Si preferisce assegnare punti e non ore alle singole storie, perché per gli esseri umani è molto più facile valutare la difficoltà di un compito che il suo tempo di esecuzione, e quindi alla fine la stima viene più precisa. Inoltre evita che si creeino situazioni di tensione, spesso inutili, nel caso in cui i tempi non vengano rispettati esattamente.</p>
+<p>Ogni team ha un proprio numero di punti che riesce a completare in uno sprint, chiamato velocità (<em>velocity</em>). La velocity viene calcolata empiricamente dopo un certo numero di sprint. Per ogni sprint, si possono pianificare un numero di punti uguale o inferiori alla velocity fissata, <strong>mai</strong> un numero maggiore: infatti non è teoricamente corretto prevedere di fare straordinari già in fase di planning. Scrum insiste molto sul fatto che il ritmo di lavoro deve essere sostenibile, e che non bisogna fare continuamente sforzi oltre le proprie possibilità.</p>
+<a class="header" href="#storytask-owner" id="storytask-owner"><h4>Story/task owner</h4></a>
+<p>Ad ogni storia o task si assegna un proprietario (owner), in modo che sia chiaro chi è che ha la responsabilità che quella storia o task venga completata.</p>
+<a class="header" href="#note" id="note"><h4>Note</h4></a>
+<p>Le storie devono essere tra di loro quanto più possibili indipendenti, da eseguire in serie o in parallelo, ma non intrecciarsi fra di loro. Se questo accade, conviene spezzare le storie, per renderle indipendenti.</p>
+<a class="header" href="#esecuzione" id="esecuzione"><h3>Esecuzione</h3></a>
+<p>In questa fase ogni membro del team di sviluppo implementa le proprie storie o task. Quando comincia l'implementazione, lo sviluppatore segna il task o la storia in &quot;Work in progress&quot; nel cartellone del team o qualche altro strumento di tracciamento, anche digitale. Man mano che li completa, segna la storia o task come completato (done) e passa al successivo. Ad ogni momento, ognuno deve essere su un unico task.</p>
+<p>Non è possibile cambiare i storie o task in questa fare, per nessun motivo, neanche da parte dell'amministratore dell'azienda o del cliente: è cura dello Scrum Master assicurarsi di questo.</p>
+<a class="header" href="#review-meeting" id="review-meeting"><h3>Review meeting</h3></a>
+<p>Alla fine della fase di esecuzione, i vari owner dimostrano le storie e task <strong>che hanno completato</strong> al Product Owner, che valuta se sono effettivamente complete come si aspetta il cliente, o c'è qualcosa di incogruente e devono essere riviste. Quest'ultime devono essere sempre ri-pianificate nello sprint successivo e ricominciare il ciclo, non possono per nessun motivo essere &quot;corrette al volo&quot;, perché in questo modo si perde facilmente il controllo della situazione.</p>
+<p>Attenzione: <strong>non</strong> si possono dimostrare <strong>storie incomplete</strong> (non in done), anche se manca solo il 10%: una storia o è completa, o è fallita, nessuna via di mezzo. Una storia parzialmente completa si considera fallita e si rivaluta nella pianificazione successiva. Il Product Owner decide se le storie sono effettivamente complete o no.</p>
+<p>Lo Scrum Master si assicura che tutto il processo sia eseguito correttamente.</p>
+<a class="header" href="#daily-meeting" id="daily-meeting"><h3>Daily meeting</h3></a>
+<p>C'è un ulteriore importante cerimonia Scrum che si celebra ogni mattina, il <em>&quot;Daily Meeting&quot;</em>: è un incontro giornaliero di massimo 15 minuti, <em>interno al team</em> (gli esterni non possono partecipare), in cui ci si assicura che tutto stia procedendo come previsto. Visto che i partecipanti devono stare in piedi per favorire la concentrazione, viene anche detto &quot;Stand-up meeting&quot;. Noi non faremo ogni giorno perché sarebbe molto difficile da eseguire nel contesto scolastico, ma vediamo se riusciamo a inserirlo in qualche occasione.</p>
+<a class="header" href="#design" id="design"><h1>Design</h1></a>
+<p>In questo capitolo vedremo come progettare un'applicazione software in modo che si abbia la ragionevole certezza che soddisfi effettivamente le necessità del cliente.</p>
+<a class="header" href="#brainstorming" id="brainstorming"><h1>Brainstorming</h1></a>
+<p>Se ancora non si hanno le idee chiare su cosa si deve realizzare, è utile fare una fase di <em>brainstorming</em>.</p>
+<p>Il termine brainstorming è spesso abusato, ma identifica invece un insieme di regole e tecniche ben definite che servono a massimizzare l'efficacia dell'incontro.</p>
+<p>L'obiettivo in questa fase è di far emergere la maggior parte di idee da parte dei partecipanti. Non è fondamentale che siano effettivamente realizzabili: questa valutazione di fattibilità sarà un passo successivo.</p>
+<p>È importante notare anche come il brainstorming sia <em>consultivo</em> e non <em>decisionale</em>. Non avrebbe senso far terminare l'incontro con delle decisioni definitive; al contrario è utilissimo per chi dovrà fare il design avere una base di idee su cui lavorare.</p>
+<p>Ci sono vari modi per implementare un incontro di brainstorming. Noi prendiamo in prestito quella utilizzano in Google, come descritta in <a href="https://www.themuse.com/advice/how-to-brainstorm-like-google">questo articolo</a>.</p>
+<a class="header" href="#principi-fondamentali" id="principi-fondamentali"><h2>Principi fondamentali</h2></a>
+<p>Ci sono 4 principi fondamentali da tenere sempre a mente:</p>
+<ul>
+<li>concentrarsi sulla quantità, non sulla qualità: tirare fuori tutte le idee che vengono in mente</li>
+<li>limitare le critiche: sia quelle alle proprie idee che quelle degli altri</li>
+<li>strane idee sono OK: vanno bene anche idee che all'inizio possono sembrare assurde, non si sa mai cosa può saltare fuori dopo un po' di riflessione</li>
+<li>combinare: va bene combinare le idee fra loro, anche di persone diverse</li>
+</ul>
+<a class="header" href="#implementazione" id="implementazione"><h2>Implementazione</h2></a>
+<p>Tenendo a mente i principi qui sopra, si può realizzare in pratica un brainstorming come segue:</p>
+<ul>
+<li>10 minuti: ognuno scrive le proprie idee in una lista su carta; è fondamentale carta e penna in questo momento, perché è dimostrato che aiutano la concentrazione e la fantasia</li>
+<li>2 minuti: ognuno seleziona 2 delle proprie idee, che gli sembrano migliori</li>
+<li>a turno ognungo espone le proprie 2 idee agli altri, e dopo breve discussione si segnano su una lavagna</li>
+<li>alla fine si effettua una votazione su quali idee sembrano migliori al gruppo.</li>
+</ul>
+<p>Come dicevamo all'inizio, il brainstorming non è decisionale, quindi non &quot;vince&quot; l'idea con più voti. Però, chiaramente, le idee di maggiore successo saranno quelle prese più in considerazione dai responsabili del progetto.</p>
+<a class="header" href="#brief-di-progetto" id="brief-di-progetto"><h2>Brief di progetto</h2></a>
+<p>Una volta che si hanno le idee chiare su cosa deve fare il progetto nel suo complesso, è il momento di scrivere il primo documento <strong>prescrittivo</strong> su cui si baseranno tutti gli altri.</p>
+<blockquote>
+<p>Con <em>prescrittivo</em> si intende un documento che deve deve essere rispettato, e su cui non si può andare in deroga. In altre parole è una &quot;fonte di verità&quot;, e in caso di contraddizione tra documenti, ha priorità il documento con valore prescrittivo.</p>
+</blockquote>
+<p>Il brief è un documento tipicamente abbastanza breve che deve contenere i <strong>risultati attesi</strong> dal punto di vista business. Non si concentra su come il progetto deve essere implementato, ma su cosa deve fare e a chi è rivolto. Il brief sarà il documento a cui ci si riferirà sempre in caso di indecisione su una scelta di design o di implementazione.</p>
+<p>Per noi, deve contenere almeno le seguenti informazioni:</p>
+<ul>
+<li>obiettivo: una frase preliminare, in cui si cerca di identificare l'ambito del progetto ed eventualmente i suoi punti di forza e unicità</li>
+<li>destinatari: a chi è rivolto, in base alla pertinenza si può specificare l'intervallo di età, la professione, l'area geografica, etc.</li>
+<li>sintesi: una descrizione più lunga in cui si descrive meglio l'ambito del progetto, il problema dei destinatari, la soluzione proposta a tale problema, i punti di forza di questo progetto</li>
+<li>dispositivi di riferimento: è importante qui specificare anche con quali dispositivi e piattaforme si è interessati: desktop, tablet, smartphone, smartTV, Chrome, Safari, Explorer, etc.</li>
+</ul>
+<p>Altre informazioni utili che si possono aggiungere al brief sono il background del progetto e le motivazioni. In generale si può aggiungere tutto quello che si pensa potrà essere utile in fase nelle fasi successive.</p>
+<p>Si consiglia di usare il tempo presente, e non futuro, perché come ce lo porteremo per tutto il tempo del progetto.</p>
+<a class="header" href="#esempio" id="esempio"><h3>Esempio</h3></a>
+<p>Sito per organizzare eventi aziendali. I destinatari sono i dipendenti dell'azienda. Il sito permette di creare eventi da parte dei dipendenti, e poter dare la propria adesione o manifestazione di interesse ad eventi creati da altri. Il dispositivo di riferimento è lo smartphone.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
